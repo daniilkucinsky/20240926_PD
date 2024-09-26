@@ -8,7 +8,6 @@ class Task {
         $this->id = $id;
         $this->title = $title;
         $this->description = $description;
-        $this->newdescription = $newdescription;
     }
 
     public function setTitle($title) {
@@ -33,7 +32,7 @@ function displayAllTasks($tasks) {
     if (empty($tasks)) {
         echo "No tasks available.\n";
     } else {
-        foreach ($tasks as $description) {
+        foreach ($tasks as $id) {
         }
     }
 }
@@ -57,7 +56,7 @@ function updateTask(&$tasks) {
         $newTitle = readline("Enter New Title: ");
 
         $tasks[$id]->setTitle($newTitle);
-        $tasks[$id]->setDescription($newDescription);
+        $tasks[$id]->setDescription($description);
 
         echo "Task Updated.\n";
     } else {
