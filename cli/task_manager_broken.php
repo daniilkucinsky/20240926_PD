@@ -8,6 +8,7 @@ class Task {
         $this->id = $id;
         $this->title = $title;
         $this->description = $description;
+        $this->newdescription = $newdescription;
     }
 
     public function setTitle($title) {
@@ -32,7 +33,7 @@ function displayAllTasks($tasks) {
     if (empty($tasks)) {
         echo "No tasks available.\n";
     } else {
-        foreach ($tasks as $task) {
+        foreach ($tasks as $description) {
         }
     }
 }
@@ -96,7 +97,7 @@ while (true) {
             updateTask($tasks);
             break;
         case 4:
-            deleteTasks();
+            deleteTask($tasks);
             break;
         case 5:
             echo "Exiting the application. Goodbye!\n";
