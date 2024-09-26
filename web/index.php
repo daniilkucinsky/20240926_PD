@@ -13,5 +13,6 @@
       <input name="password" type="password" />
       <button type="submit">Log in</button>
     </form>
+    <script src="app.js"></script>
 </body>
 </html>
